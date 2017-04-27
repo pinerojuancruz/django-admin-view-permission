@@ -28,6 +28,8 @@ def submit_row(context):
             'show_save_and_add_another', ctx['show_save_and_add_another']),
         'show_save_and_continue': context.get(
             'show_save_and_continue', ctx['show_save_and_continue']),
+        'show_save_as_new': context.get(
+            'show_save_as_new', ctx['show_save_as_new']),
         'show_save': context.get(
             'show_save', ctx['show_save']),
     })
@@ -274,6 +276,7 @@ class AdminViewPermissionModelAdmin(AdminViewPermissionBaseModelAdmin,
                 opts.verbose_name)
 
             extra_context['show_save'] = False
+            extra_context['show_save_as_new'] = False
             extra_context['show_save_and_continue'] = False
             extra_context['show_save_and_add_another'] = False
 
